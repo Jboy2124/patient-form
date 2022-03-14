@@ -7,7 +7,7 @@ let password = document.getElementById("password");
 let btnLogin = document.getElementById("btn-login");
 
 
-let validated = async () => {
+let validated = () => {
     if(username.value == "Admin" && password.value == "Admin") {
         return true
     } else {
