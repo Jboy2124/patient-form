@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/patient-form.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+              rel="stylesheet" 
+              integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+              crossorigin="anonymous">
+    <title>Clinic Information System</title>
+</head>
+<body>
+    <div id="main-container" class="container-fluid p-0">
+        
+        <div id="form-container" class="container p-5">
+            <div class="header-text">
+                <h1>PATIENT FORM</h1>
+            </div>
+            <form id="patient-form" action="">
+
+                <!-- Name & Address  -->
+                <div class="row py-3">
+                    <div class="row pb-3">
+                        <div class="col-sm-4">
+                            <label id="fname-label" for="" class="form-label">First Name </label>
+                            <input id="fname" type="text" class="form-control" value="" required/>
+                        </div>
+                        <div class="col-sm-4">
+                            <label for="" class="form-label">Middle Name </label>
+                            <input id="mname" type="text" class="form-control" value="">
+                        </div>
+                        <div class="col-sm-4">
+                            <label id="lname-label" for="" class="form-label">Last Name </label>
+                            <input id="lname" type="text" class="form-control" value="" required/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label id="address-label" for="" class="form-label">Address  </label>
+                            <input id="address" type="text" class="form-control" value="" required/>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- DOB, Contact & Gender  -->
+                <div class="row py-3">
+                    <div class="col-sm-4">
+                        <label id="dob-label" for="" class="form-label">Date of Birth </label>
+                        <input id="dob" type="date" class="form-control date" required/>
+                    </div>
+                    <div class="col-sm-4">
+                        <label id="contact-label" for="" class="form-label">Contact Number </label>
+                        <input id="contactNo" type="number" class="form-control" value="" placeholder="09xx-xxx-xxxx" required/>
+                    </div>
+                    <div id="radio-container" class="col-sm-4">
+                        <label id="gender-label" for="" class="form-label" >Gender </label>
+                        <div class="">
+                            <div class="form-check form-check-inline">
+                                <input id="radMale" type="radio" class="form-check-input" value="Male" name="Gender">
+                                <label for="radMale" class="form-check-label">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input id="radFemale" type="radio" class="form-check-input" value="Female" name="Gender">
+                                <label for="radFemale" class="form-check-label">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Medical History  -->
+                <div class="row py-3">
+                    <div class="col-sm-4">
+                        <h5>Medical History</h5>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-check">
+                            <input name="medRec" class="form-check-input" type="checkbox" value="Asthma" id="asthma">
+                            <label class="form-check-label" for="asthma">Asthma</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input name="medRec" class="form-check-input" type="checkbox" value="Cancer" id="cancer">
+                            <label class="form-check-label" for="cancer">Cancer</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input name="medRec" class="form-check-input" type="checkbox" value="Cardiac Disease" id="cardiac-disease">
+                            <label class="form-check-label" for="cardiac-disease">Cardiac Disease</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input name="medRec" class="form-check-input" type="checkbox" value="Diabetes" id="diabetes">
+                            <label class="form-check-label" for="diabetes">Diabetes</label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="form-check">
+                            <input name="medRec" class="form-check-input" type="checkbox" value="Hypertension" id="hypertension">
+                            <label class="form-check-label" for="hypertension">Hypertension</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input name="medRec" class="form-check-input" type="checkbox" value="Psychiatric Disorder" id="psych-disorder">
+                            <label class="form-check-label" for="psych-disorder">Psychiatric Disorder</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input name="medRec" class="form-check-input" type="checkbox" value="Epilepsy" id="epilepsy">
+                            <label class="form-check-label" for="epilepsy">Epilepsy</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input name="medRec" class="form-check-input" type="checkbox" value="Others" id="others">
+                            <label class="form-check-label" for="others">Others</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Current Symptoms  -->
+                <div class="row py-3">
+                    <div class="col-sm-2"><h5>Current Symptoms: </h5></div>
+                    <div class="col-sm-4">
+                        <select class="form-select" multiple aria-label="multiple-select" id="symptoms">
+                            <option value="Chest Pain">Chest Pain</option>
+                            <option value="Respiratory">Respiratory</option>
+                            <option value="Hematological">Hematological</option>
+                            <option value="Lymphatic">Lymphatic</option>
+                            <option value="Neurological">Neurological</option>
+                            <option value="Psychiatric">Psychiatric</option>
+                            <option value="Gastrointestinal">Gastrointestinal</option>
+                            <option value="Weight Loss">Weight Loss</option>
+                          </select>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <h5>Are you currently taking medication?</h5>
+                        <div class="form-check form-check-inline">
+                            <input id="yes-taking" type="radio" class="form-check-input" name="taking-medicine" value="Yes">
+                            <label for="" class="form-check-label">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input id="not-taking" type="radio" class="form-check-input" name="taking-medicine" value="No">
+                            <label for="" class="form-check-label">No</label>
+                        </div>
+                        <div class="med-container">
+                         <input id="txt-medication" type="text" class="form-control" name="medications" value="">
+                        </div>
+                    </div>
+                </div>
+
+                   <!-- Button Submit  -->
+                <div class="cotainer p-0">
+                    <div class="btn-submit-container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button id="btn-submit" type="submit" class="btn btn-primary">Submit Information</button>
+                                <button id="btn-reset" type="reset" class="btn btn-secondary">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>       
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+                 integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+                 crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>
